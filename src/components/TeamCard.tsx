@@ -49,7 +49,7 @@ const TeamCard = ({ team, setSelectedTeam }: Props) => {
   }, [leagueStanding, team.id]);
 
   return (
-    <Skeleton isLoaded={!isLoading}>
+    <Skeleton isLoaded={!isLoading} h="52">
       {response ? (
         <Box
           w="full"
@@ -101,6 +101,7 @@ const TeamCard = ({ team, setSelectedTeam }: Props) => {
             </Box>
           </Stack>
 
+          {/* Pie chart and other teams in league */}
           {PLStanding && (
             <>
               <Heading as="h3" size="md" mt="10" mb="8" textAlign="center">
