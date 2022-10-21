@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Heading, Divider } from "@chakra-ui/react";
+import { Container, Box, Heading, Divider } from "@chakra-ui/react";
 
 import { useQuery } from "@tanstack/react-query";
 import { fetchTeamList, queryKeys } from "../api";
@@ -15,7 +15,7 @@ const Home = () => {
   );
 
   return (
-    <Box h="100vh" p="6" maxW={768} mx="auto">
+    <Container p="6" maxW={768} mx="auto">
       <Box width="full">
         <Heading textAlign="center" mb="6">
           Futbol360
@@ -31,7 +31,7 @@ const Home = () => {
       {selectedTeam.id && (
         <TeamCard team={selectedTeam} setSelectedTeam={setSelectedTeam} />
       )}
-    </Box>
+    </Container>
   );
 };
 
