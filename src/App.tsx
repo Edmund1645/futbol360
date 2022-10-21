@@ -10,7 +10,14 @@ const themeConfig: ThemeConfig = {
 };
 export const theme = extendTheme({ config: themeConfig });
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      cacheTime: 60 * 60 * 1000, // 1hr because the data barely changes
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 export const App = () => (
   <ChakraProvider theme={theme}>

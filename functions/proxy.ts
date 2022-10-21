@@ -18,7 +18,7 @@ const handler: Handler = async (event, context) => {
 
   try {
     const response = await axios.get(body.targetAPIPath, {
-      params: body.targetAPIParams,
+      params: body.targetAPIParams || {},
       headers: {
         "X-Auth-Token": apiKey,
       },
@@ -31,7 +31,7 @@ const handler: Handler = async (event, context) => {
   } catch (error) {
     return {
       statusCode: error.response.status,
-      ...error,
+      body: JSON.stringify(error),
     };
   }
 };

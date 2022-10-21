@@ -11,6 +11,13 @@ export interface ITeamCompact {
   venue: string;
   lastUpdated: Date;
 }
+export interface IRunningCompetition {
+  id: number;
+  name: string;
+  code: string;
+  type: string;
+  emblem: string;
+}
 
 export interface ITeamListResponse {
   count: number;
@@ -18,8 +25,8 @@ export interface ITeamListResponse {
   teams: ITeamCompact[];
 }
 
-export interface ITeamVerbose {
-  area: Area;
+export interface ITeamResponse {
+  area: Record<string, any>;
   id: number;
   name: string;
   shortName: string;
@@ -30,42 +37,35 @@ export interface ITeamVerbose {
   founded: number;
   clubColors: string;
   venue: string;
-  runningCompetitions: RunningCompetition[];
-  coach: Coach;
-  squad: Squad[];
+  runningCompetitions: IRunningCompetition[];
+  coach: Record<string, any>;
+  squad: Record<string, any>[];
   staff: any[];
   lastUpdated: Date;
 }
 
-export interface Area {
-  id: number;
-  name: string;
-  code: string;
-  flag: string;
+export interface ICompetitionStandingsResponse {
+  filters: Record<string, number | string>;
+  area: Record<string, any>;
+  competition: IRunningCompetition;
+  season: Record<string, number | any>;
+  standings: {
+    stage: string;
+    type: string;
+    table: ITeamStanding[];
+  }[];
 }
 
-export interface Coach {
-  id: number;
-  firstName: string;
-  lastName: string;
-  name: string;
-  dateOfBirth: Date;
-  nationality: string;
-  contract: Record<string, any>;
-}
-
-export interface RunningCompetition {
-  id: number;
-  name: string;
-  code: string;
-  type: string;
-  emblem: string;
-}
-
-export interface Squad {
-  id: number;
-  name: string;
-  position: Position;
-  dateOfBirth: Date;
-  nationality: string;
+export interface ITeamStanding {
+  position: number;
+  team: Pick<ITeamCompact, "id" | "name" | "shortName" | "tla" | "crest">;
+  playedGames: number;
+  form: string;
+  won: number;
+  draw: number;
+  lost: number;
+  points: number;
+  goalsFor: number;
+  goalsAgainst: number;
+  goalDifference: number;
 }

@@ -10,7 +10,6 @@ import TeamCard from "../components/TeamCard";
 
 const Home = () => {
   const { data: response } = useQuery([queryKeys.teamList], fetchTeamList, {
-    staleTime: Infinity,
     enabled: false,
   });
   const [selectedTeam, setSelectedTeam] = useState<ITeamCompact>(
@@ -31,7 +30,7 @@ const Home = () => {
         setSelectedTeam={setSelectedTeam}
       />
 
-      <TeamCard team={selectedTeam} />
+      {selectedTeam.id && <TeamCard team={selectedTeam} />}
     </Box>
   );
 };

@@ -32,6 +32,11 @@ const SearchBox = ({ teams = [], setSelectedTeam }: Props) => {
     [miniSearch]
   );
 
+  const handleTeamSelection = (team: ITeamCompact) => {
+    setSelectedTeam(team);
+    setShowResultBox(false);
+  };
+
   return (
     <Box mt="10" position="relative">
       <Input
@@ -39,22 +44,20 @@ const SearchBox = ({ teams = [], setSelectedTeam }: Props) => {
         onChange={handleSearch}
         value={searchTerm}
         onFocus={() => setShowResultBox(true)}
-        onBlur={() => setShowResultBox(false)}
       />
       {showResultBox ? (
         <Box
           position="absolute"
-          bottom="-56"
+          bottom="-320px"
           w="full"
-          h="52"
-          opacity="0.8"
+          h="300px"
           borderWidth="1px"
           borderRadius="base"
           borderStyle="solid"
           borderColor="gray.600"
-          backgroundColor="whiteAlpha.100"
-          backdropBlur="lg"
+          backgroundColor="gray.700"
           p="3"
+          zIndex="overlay"
         >
           {searchResults.length === 0 && (
             <Text textAlign="center" mt="10">
@@ -66,9 +69,10 @@ const SearchBox = ({ teams = [], setSelectedTeam }: Props) => {
             {searchResults.map(({ item }) => {
               return (
                 <Button
+                  key={item.id}
                   p="3"
                   textAlign="left"
-                  onClick={() => setSelectedTeam(item)}
+                  onClick={() => handleTeamSelection(item)}
                 >
                   <Image
                     boxSize="30px"
