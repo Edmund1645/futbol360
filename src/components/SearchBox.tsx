@@ -35,6 +35,14 @@ const SearchBox = ({ teams = [], setSelectedTeam }: Props) => {
   const handleTeamSelection = (team: ITeamCompact) => {
     setSelectedTeam(team);
     setShowResultBox(false);
+    setSearchTerm("");
+  };
+
+  const onInputBlur = () => {
+    if (searchTerm) {
+      return false;
+    }
+    setShowResultBox(false);
   };
 
   return (
@@ -44,6 +52,7 @@ const SearchBox = ({ teams = [], setSelectedTeam }: Props) => {
         onChange={handleSearch}
         value={searchTerm}
         onFocus={() => setShowResultBox(true)}
+        onBlur={onInputBlur}
       />
       {showResultBox ? (
         <Box

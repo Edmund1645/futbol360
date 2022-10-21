@@ -9,9 +9,7 @@ import SearchBox from "../components/SearchBox";
 import TeamCard from "../components/TeamCard";
 
 const Home = () => {
-  const { data: response } = useQuery([queryKeys.teamList], fetchTeamList, {
-    enabled: false,
-  });
+  const { data: response } = useQuery([queryKeys.teamList], fetchTeamList);
   const [selectedTeam, setSelectedTeam] = useState<ITeamCompact>(
     {} as ITeamCompact
   );
@@ -30,7 +28,9 @@ const Home = () => {
         setSelectedTeam={setSelectedTeam}
       />
 
-      {selectedTeam.id && <TeamCard team={selectedTeam} />}
+      {selectedTeam.id && (
+        <TeamCard team={selectedTeam} setSelectedTeam={setSelectedTeam} />
+      )}
     </Box>
   );
 };

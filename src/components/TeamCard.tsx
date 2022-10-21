@@ -8,17 +8,20 @@ import {
   Text,
   Flex,
   Skeleton,
+  Button,
+  Heading,
 } from "@chakra-ui/react";
-import { FiMapPin, FiLink } from "react-icons/fi";
+import { FiMapPin, FiLink, FiPhone } from "react-icons/fi";
 import { useQuery } from "@tanstack/react-query";
 import { fetchPLStandings, fetchTeam, queryKeys } from "../api";
 import { ITeamCompact, ITeamStanding } from "../@types";
 
-import SeasonRecord from "./SeasonRecord";
+import SeasonStats from "./SeasonStats";
 interface Props {
   team: ITeamCompact;
+  setSelectedTeam: React.Dispatch<React.SetStateAction<ITeamCompact>>;
 }
-const TeamCard = ({ team }: Props) => {
+const TeamCard = ({ team, setSelectedTeam }: Props) => {
   const { isLoading, data: response } = useQuery(
     [queryKeys.team, team.id],
     () => fetchTeam(team.id)
@@ -29,18 +32,21 @@ const TeamCard = ({ team }: Props) => {
   );
 
   const [PLStanding, setPLStanding] = useState<ITeamStanding>();
+  const [otherTeams, setOtherTeams] = useState<ITeamStanding[]>([]);
 
   useEffect(() => {
     if (leagueStanding?.data) {
-      const teamStanding = leagueStanding.data.standings[0].table.find(
-        (record) => {
-          return record.team.id === team.id;
-        }
-      );
-
+      const teamsInLeague = leagueStanding.data.standings[0].table;
+      const teamStanding = teamsInLeague.find((record) => {
+        return record.team.id === team.id;
+      });
       setPLStanding(teamStanding);
+
+      // shuffle and pick three teams
+      const shuffled = [...teamsInLeague].sort(() => 0.5 - Math.random());
+      setOtherTeams(shuffled.slice(0, 3));
     }
-  }, [leagueStanding?.data, team.id]);
+  }, [leagueStanding, team.id]);
 
   return (
     <Skeleton isLoaded={!isLoading}>
@@ -71,10 +77,12 @@ const TeamCard = ({ team }: Props) => {
               </Text>
               <VStack gap="10px">
                 <Flex alignItems="center" w="full">
-                  <FiMapPin />
+                  <Box flexShrink="0">
+                    <FiMapPin />
+                  </Box>
                   <Text pl="2">{response.data.address}</Text>
                 </Flex>
-                <Flex w="full">
+                <Flex alignItems="center" w="full">
                   <FiLink />
                   <Text
                     pl="2"
@@ -85,10 +93,40 @@ const TeamCard = ({ team }: Props) => {
                     {response.data.website}
                   </Text>
                 </Flex>
+                <Flex alignItems="center" w="full">
+                  <FiPhone />
+                  <Text pl="2">N/A</Text>
+                </Flex>
               </VStack>
             </Box>
           </Stack>
-          {PLStanding && <SeasonRecord standing={PLStanding} />}
+
+          {PLStanding && (
+            <>
+              <Heading as="h3" size="md" mt="10" mb="8" textAlign="center">
+                2020/2021 Season stats
+              </Heading>
+              <SeasonStats standing={PLStanding} />
+              <Text my="5" textAlign="center">
+                Other teams in this league
+              </Text>
+              <Stack
+                direction={["column", "row"]}
+                alignItems="center"
+                justifyContent="center"
+              >
+                {otherTeams.map(({ team }) => (
+                  <Button
+                    key={team.id}
+                    variant="ghost"
+                    onClick={() => setSelectedTeam(team as ITeamCompact)}
+                  >
+                    {team.name}
+                  </Button>
+                ))}
+              </Stack>
+            </>
+          )}
         </Box>
       ) : (
         <Text mt="70px" textAlign="center">
