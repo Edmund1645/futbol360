@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useCallback } from "react";
-import { Box, Input, Text, Stack, Button, Image } from "@chakra-ui/react";
+import { Box, Input, Text, Stack } from "@chakra-ui/react";
+import SearchResultItem from "./SearchResultItem";
 import Fuse from "fuse.js";
 
 import { ITeamCompact } from "../@types/index.d";
@@ -75,24 +76,13 @@ const SearchBox = ({ teams = [], setSelectedTeam }: Props) => {
           )}
 
           <Stack h="full" overflow="scroll" w="full">
-            {searchResults.map(({ item }) => {
-              return (
-                <Button
-                  key={item.id}
-                  p="3"
-                  textAlign="left"
-                  onClick={() => handleTeamSelection(item)}
-                >
-                  <Image
-                    boxSize="30px"
-                    src={item.crest}
-                    loading="lazy"
-                    mr="2"
-                  />
-                  <Text key={item.id}>{item.name}</Text>
-                </Button>
-              );
-            })}
+            {searchResults.map(({ item }) => (
+              <SearchResultItem
+                key={item.id}
+                team={item}
+                onClick={() => handleTeamSelection(item)}
+              />
+            ))}
           </Stack>
         </Box>
       ) : null}
