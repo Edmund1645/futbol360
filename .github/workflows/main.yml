@@ -8,7 +8,7 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  build-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,4 +19,4 @@ jobs:
           node-version: 16.x
       - run: yarn install --frozen-lockfile
       - run: yarn build --if-present
-      - run: yarn e2e
+      - run: yarn e2e:ci

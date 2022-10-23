@@ -37,6 +37,7 @@
   },
   "scripts": {
     "e2e": "start-server-and-test dev http://localhost:8888 'cypress open'",
+    "e2e:ci": "start-server-and-test dev http://localhost:8888 'cypress run'",
     "dev": "netlify dev",
     "start": "react-scripts start",
     "build": "react-scripts build",
