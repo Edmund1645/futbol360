@@ -49,6 +49,7 @@ const SearchBox = ({ teams = [], setSelectedTeam }: Props) => {
   return (
     <Box mt="10" position="relative">
       <Input
+        data-testid="search-input"
         placeholder="Search team"
         onChange={handleSearch}
         value={searchTerm}
@@ -69,21 +70,26 @@ const SearchBox = ({ teams = [], setSelectedTeam }: Props) => {
           p="3"
           zIndex="overlay"
         >
-          {searchResults.length === 0 && (
+          {searchResults.length === 0 ? (
             <Text textAlign="center" mt="10">
               No results to display
             </Text>
+          ) : (
+            <Stack
+              h="full"
+              overflow="scroll"
+              w="full"
+              data-testid="search-results"
+            >
+              {searchResults.map(({ item }) => (
+                <SearchResultItem
+                  key={item.id}
+                  team={item}
+                  onClick={() => handleTeamSelection(item)}
+                />
+              ))}
+            </Stack>
           )}
-
-          <Stack h="full" overflow="scroll" w="full">
-            {searchResults.map(({ item }) => (
-              <SearchResultItem
-                key={item.id}
-                team={item}
-                onClick={() => handleTeamSelection(item)}
-              />
-            ))}
-          </Stack>
         </Box>
       ) : null}
     </Box>

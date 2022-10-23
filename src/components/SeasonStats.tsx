@@ -9,7 +9,7 @@ interface Props {
 }
 const SeasonStats = ({ standing }: Props) => {
   return (
-    <VStack justify="center">
+    <VStack justify="center" data-testid="season-stats">
       <Text>
         Average goals per match:
         <Text as="strong">

@@ -49,7 +49,7 @@ const TeamCard = ({ team, setSelectedTeam }: Props) => {
   }, [leagueStanding, team.id]);
 
   return (
-    <Skeleton isLoaded={!isLoading} h="52">
+    <Skeleton isLoaded={!isLoading} minH="52">
       {response ? (
         <Box
           w="full"
@@ -72,6 +72,7 @@ const TeamCard = ({ team, setSelectedTeam }: Props) => {
                 display="block"
                 as="strong"
                 textAlign={["center", "left"]}
+                data-testid="team-name"
               >
                 {response.data.name}
               </Text>
@@ -116,8 +117,9 @@ const TeamCard = ({ team, setSelectedTeam }: Props) => {
                 alignItems="center"
                 justifyContent="center"
               >
-                {otherTeams.map(({ team }) => (
+                {otherTeams.map(({ team }, index) => (
                   <Button
+                    data-testid={`other-teams-${index}`}
                     key={team.id}
                     variant="ghost"
                     onClick={() => setSelectedTeam(team as ITeamCompact)}

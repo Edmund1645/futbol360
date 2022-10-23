@@ -1,0 +1,255 @@
+{
+  "area": {
+    "id": 2072,
+    "name": "England",
+    "code": "ENG",
+    "flag": "https://crests.football-data.org/770.svg"
+  },
+  "id": 64,
+  "name": "Liverpool FC",
+  "shortName": "Liverpool",
+  "tla": "LIV",
+  "crest": "https://crests.football-data.org/64.png",
+  "address": "Anfield Road Liverpool L4 0TH",
+  "website": "http://www.liverpoolfc.tv",
+  "founded": 1892,
+  "clubColors": "Red / White",
+  "venue": "Anfield",
+  "runningCompetitions": [
+    {
+      "id": 2021,
+      "name": "Premier League",
+      "code": "PL",
+      "type": "LEAGUE",
+      "emblem": "https://crests.football-data.org/PL.png"
+    },
+    {
+      "id": 2001,
+      "name": "UEFA Champions League",
+      "code": "CL",
+      "type": "CUP",
+      "emblem": "https://crests.football-data.org/CL.png"
+    },
+    {
+      "id": 2139,
+      "name": "Football League Cup",
+      "code": "FLC",
+      "type": "CUP",
+      "emblem": "https://crests.football-data.org/FLC.png"
+    }
+  ],
+  "coach": {
+    "id": 9344,
+    "firstName": "JÃ¼rgen",
+    "lastName": "Klopp",
+    "name": "JÃ¼rgen Klopp",
+    "dateOfBirth": "1967-06-16",
+    "nationality": "Germany",
+    "contract": { "start": "2015-10", "until": "2026-06" }
+  },
+  "squad": [
+    {
+      "id": 1795,
+      "name": "Alisson",
+      "position": "Goalkeeper",
+      "dateOfBirth": "1992-10-02",
+      "nationality": "Brazil"
+    },
+    {
+      "id": 8197,
+      "name": "AdriÃ¡n",
+      "position": "Goalkeeper",
+      "dateOfBirth": "1987-01-03",
+      "nationality": "Spain"
+    },
+    {
+      "id": 102046,
+      "name": "Caoimhin Kelleher",
+      "position": "Goalkeeper",
+      "dateOfBirth": "1998-11-23",
+      "nationality": "Ireland"
+    },
+    {
+      "id": 7383,
+      "name": "Kostas Tsimikas",
+      "position": "Defence",
+      "dateOfBirth": "1996-05-12",
+      "nationality": "Greece"
+    },
+    {
+      "id": 7861,
+      "name": "James Milner",
+      "position": "Defence",
+      "dateOfBirth": "1986-01-04",
+      "nationality": "England"
+    },
+    {
+      "id": 7862,
+      "name": "Joe Gomez",
+      "position": "Defence",
+      "dateOfBirth": "1997-05-23",
+      "nationality": "England"
+    },
+    {
+      "id": 7865,
+      "name": "JoÃ«l Matip",
+      "position": "Defence",
+      "dateOfBirth": "1991-08-08",
+      "nationality": "Cameroon"
+    },
+    {
+      "id": 7867,
+      "name": "Trent Alexander-Arnold",
+      "position": "Defence",
+      "dateOfBirth": "1998-10-07",
+      "nationality": "England"
+    },
+    {
+      "id": 7868,
+      "name": "Andrew Robertson",
+      "position": "Defence",
+      "dateOfBirth": "1994-03-11",
+      "nationality": "Scotland"
+    },
+    {
+      "id": 7869,
+      "name": "Virgil van Dijk",
+      "position": "Defence",
+      "dateOfBirth": "1991-07-08",
+      "nationality": "Netherlands"
+    },
+    {
+      "id": 9542,
+      "name": "Ibrahima KonatÃ©",
+      "position": "Defence",
+      "dateOfBirth": "1999-05-25",
+      "nationality": "France"
+    },
+    {
+      "id": 124778,
+      "name": "Calvin Ramsay",
+      "position": "Defence",
+      "dateOfBirth": "2003-07-31",
+      "nationality": "Scotland"
+    },
+    {
+      "id": 125215,
+      "name": "Nathaniel Phillips",
+      "position": "Defence",
+      "dateOfBirth": "1997-03-21",
+      "nationality": "England"
+    },
+    {
+      "id": 356,
+      "name": "Thiago AlcÃ¢ntara",
+      "position": "Midfield",
+      "dateOfBirth": "1991-04-11",
+      "nationality": "Spain"
+    },
+    {
+      "id": 1148,
+      "name": "Arthur",
+      "position": "Midfield",
+      "dateOfBirth": "1996-08-12",
+      "nationality": "Brazil"
+    },
+    {
+      "id": 3320,
+      "name": "Jordan Henderson",
+      "position": "Midfield",
+      "dateOfBirth": "1990-06-17",
+      "nationality": "England"
+    },
+    {
+      "id": 3323,
+      "name": "Alex Oxlade-Chamberlain",
+      "position": "Midfield",
+      "dateOfBirth": "1993-08-15",
+      "nationality": "England"
+    },
+    {
+      "id": 7873,
+      "name": "Curtis Jones",
+      "position": "Midfield",
+      "dateOfBirth": "2001-01-30",
+      "nationality": "England"
+    },
+    {
+      "id": 8749,
+      "name": "Fabinho",
+      "position": "Midfield",
+      "dateOfBirth": "1993-10-23",
+      "nationality": "Brazil"
+    },
+    {
+      "id": 9547,
+      "name": "Naby KeÃ¯ta",
+      "position": "Midfield",
+      "dateOfBirth": "1995-02-10",
+      "nationality": "Guinea"
+    },
+    {
+      "id": 3233,
+      "name": "Roberto Firmino",
+      "position": "Offence",
+      "dateOfBirth": "1991-10-02",
+      "nationality": "Brazil"
+    },
+    {
+      "id": 3754,
+      "name": "Mohamed Salah",
+      "position": "Offence",
+      "dateOfBirth": "1992-06-15",
+      "nationality": "Egypt"
+    },
+    {
+      "id": 4092,
+      "name": "Diogo Jota",
+      "position": "Offence",
+      "dateOfBirth": "1996-12-04",
+      "nationality": "Portugal"
+    },
+    {
+      "id": 22396,
+      "name": "Luis DÃ­az",
+      "position": "Offence",
+      "dateOfBirth": "1997-01-13",
+      "nationality": "Colombia"
+    },
+    {
+      "id": 28612,
+      "name": "Darwin NÃºÃ±ez",
+      "position": "Offence",
+      "dateOfBirth": "1999-06-24",
+      "nationality": "Uruguay"
+    },
+    {
+      "id": 124824,
+      "name": "Harvey Elliott",
+      "position": "Offence",
+      "dateOfBirth": "2003-04-04",
+      "nationality": "England"
+    }
+  ],
+  "staff": [
+    {
+      "id": 9881,
+      "firstName": "Pepijn",
+      "lastName": "Lijnders",
+      "name": "Pepijn Lijnders",
+      "dateOfBirth": "1983-01-24",
+      "nationality": "Netherlands",
+      "contract": { "start": "2018-06", "until": "2026-06" }
+    },
+    {
+      "id": 179718,
+      "firstName": "Peter",
+      "lastName": "Krawietz",
+      "name": "Peter Krawietz",
+      "dateOfBirth": "1971-12-31",
+      "nationality": "Germany",
+      "contract": { "start": "2015-10", "until": "2026-06" }
+    }
+  ],
+  "lastUpdated": "2022-02-10T19:30:22Z"
+}

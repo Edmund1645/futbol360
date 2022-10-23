@@ -8,9 +8,14 @@ interface Props {
 }
 const SearchResultItem = ({ team, onClick }: Props) => {
   return (
-    <Button key={team.id} p="3" textAlign="left" onClick={onClick}>
+    <Button
+      data-testid={`search-result-${team.id}`}
+      p="3"
+      textAlign="left"
+      onClick={onClick}
+    >
       <Image boxSize="30px" src={team.crest} loading="lazy" mr="2" />
-      <Text key={team.id}>{team.name}</Text>
+      <Text>{team.name}</Text>
     </Button>
   );
 };

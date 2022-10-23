@@ -3,7 +3,7 @@ import axios from "axios";
 
 interface IEventBody {
   targetAPIPath: string;
-  targetAPIParams: Record<string, any>;
+  targetAPIFilters: Record<string, any>;
 }
 const handler: Handler = async (event, context) => {
   const body: IEventBody = JSON.parse(event.body as string);
@@ -18,7 +18,7 @@ const handler: Handler = async (event, context) => {
 
   try {
     const response = await axios.get(body.targetAPIPath, {
-      params: body.targetAPIParams || {},
+      params: body.targetAPIFilters || {},
       headers: {
         "X-Auth-Token": apiKey,
       },

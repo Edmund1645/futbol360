@@ -1,0 +1,215 @@
+{
+  "area": {
+    "id": 2072,
+    "name": "England",
+    "code": "ENG",
+    "flag": "https://crests.football-data.org/770.svg"
+  },
+  "id": 65,
+  "name": "Manchester City FC",
+  "shortName": "Man City",
+  "tla": "MCI",
+  "crest": "https://crests.football-data.org/65.png",
+  "address": "SportCity Manchester M11 3FF",
+  "website": "https://www.mancity.com",
+  "founded": 1880,
+  "clubColors": "Sky Blue / White",
+  "venue": "Etihad Stadium",
+  "runningCompetitions": [
+    {
+      "id": 2021,
+      "name": "Premier League",
+      "code": "PL",
+      "type": "LEAGUE",
+      "emblem": "https://crests.football-data.org/PL.png"
+    },
+    {
+      "id": 2001,
+      "name": "UEFA Champions League",
+      "code": "CL",
+      "type": "CUP",
+      "emblem": "https://crests.football-data.org/CL.png"
+    },
+    {
+      "id": 2139,
+      "name": "Football League Cup",
+      "code": "FLC",
+      "type": "CUP",
+      "emblem": "https://crests.football-data.org/FLC.png"
+    }
+  ],
+  "coach": {
+    "id": 11603,
+    "firstName": "Josep",
+    "lastName": "Guardiola i Sala",
+    "name": "Pep Guardiola",
+    "dateOfBirth": "1971-01-18",
+    "nationality": "Spain",
+    "contract": { "start": null, "until": null }
+  },
+  "squad": [
+    {
+      "id": 3222,
+      "name": "Ederson",
+      "position": "Goalkeeper",
+      "dateOfBirth": "1993-08-17",
+      "nationality": "Brazil"
+    },
+    {
+      "id": 4172,
+      "name": "Scott Carson",
+      "position": "Goalkeeper",
+      "dateOfBirth": "1985-09-03",
+      "nationality": "England"
+    },
+    {
+      "id": 6958,
+      "name": "Stefan Ortega Moreno",
+      "position": "Goalkeeper",
+      "dateOfBirth": "1992-11-06",
+      "nationality": "Germany"
+    },
+    {
+      "id": 143,
+      "name": "Manuel Akanji",
+      "position": "Defence",
+      "dateOfBirth": "1995-07-19",
+      "nationality": "Switzerland"
+    },
+    {
+      "id": 164,
+      "name": "Sergio GÃ³mez",
+      "position": "Defence",
+      "dateOfBirth": "2000-09-04",
+      "nationality": "Spain"
+    },
+    {
+      "id": 2000,
+      "name": "JoÃ£o Cancelo",
+      "position": "Defence",
+      "dateOfBirth": "1994-05-27",
+      "nationality": "Portugal"
+    },
+    {
+      "id": 3311,
+      "name": "Kyle Walker",
+      "position": "Defence",
+      "dateOfBirth": "1990-05-28",
+      "nationality": "England"
+    },
+    {
+      "id": 3313,
+      "name": "John Stones",
+      "position": "Defence",
+      "dateOfBirth": "1994-05-28",
+      "nationality": "England"
+    },
+    {
+      "id": 7882,
+      "name": "Benjamin Mendy",
+      "position": "Defence",
+      "dateOfBirth": "1994-07-17",
+      "nationality": "France"
+    },
+    {
+      "id": 7884,
+      "name": "Aymeric Laporte",
+      "position": "Defence",
+      "dateOfBirth": "1994-05-27",
+      "nationality": "Spain"
+    },
+    {
+      "id": 8240,
+      "name": "Nathan AkÃ©",
+      "position": "Defence",
+      "dateOfBirth": "1995-02-18",
+      "nationality": "Netherlands"
+    },
+    {
+      "id": 10183,
+      "name": "RÃºben Dias",
+      "position": "Defence",
+      "dateOfBirth": "1997-05-14",
+      "nationality": "Portugal"
+    },
+    {
+      "id": 3182,
+      "name": "Ilkay GÃ¼ndogan",
+      "position": "Midfield",
+      "dateOfBirth": "1990-10-24",
+      "nationality": "Germany"
+    },
+    {
+      "id": 3199,
+      "name": "Rodri",
+      "position": "Midfield",
+      "dateOfBirth": "1996-06-22",
+      "nationality": "Spain"
+    },
+    {
+      "id": 3254,
+      "name": "Bernardo Silva",
+      "position": "Midfield",
+      "dateOfBirth": "1994-08-10",
+      "nationality": "Portugal"
+    },
+    {
+      "id": 3654,
+      "name": "Kevin De Bruyne",
+      "position": "Midfield",
+      "dateOfBirth": "1991-06-28",
+      "nationality": "Belgium"
+    },
+    {
+      "id": 3895,
+      "name": "Jack Grealish",
+      "position": "Midfield",
+      "dateOfBirth": "1995-09-10",
+      "nationality": "England"
+    },
+    {
+      "id": 4147,
+      "name": "Kalvin Phillips",
+      "position": "Midfield",
+      "dateOfBirth": "1995-12-02",
+      "nationality": "England"
+    },
+    {
+      "id": 7888,
+      "name": "Phil Foden",
+      "position": "Midfield",
+      "dateOfBirth": "2000-05-28",
+      "nationality": "England"
+    },
+    {
+      "id": 8069,
+      "name": "Riyad Mahrez",
+      "position": "Midfield",
+      "dateOfBirth": "1991-02-21",
+      "nationality": "Algeria"
+    },
+    {
+      "id": 144892,
+      "name": "Cole Palmer",
+      "position": "Midfield",
+      "dateOfBirth": "2002-05-06",
+      "nationality": "England"
+    },
+    {
+      "id": 38101,
+      "name": "Erling Haaland",
+      "position": "Offence",
+      "dateOfBirth": "2000-07-21",
+      "nationality": "Norway"
+    },
+    {
+      "id": 98571,
+      "name": "JuliÃ¡n Ãlvarez",
+      "position": "Offence",
+      "dateOfBirth": "2000-01-31",
+      "nationality": "Argentina"
+    }
+  ],
+  "staff": [],
+  "lastUpdated": "2022-02-10T19:48:37Z"
+}

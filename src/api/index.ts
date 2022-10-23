@@ -7,28 +7,28 @@ import {
 } from "../@types";
 
 const ProxyAPI = axios.create({
-  baseURL: "/.netlify/functions/proxy",
+  baseURL: "/.netlify/functions",
 });
 
 export const fetchTeamList = () => {
-  return ProxyAPI.post<ITeamListResponse>("/", {
+  return ProxyAPI.post<ITeamListResponse>("/proxy/team-list", {
     targetAPIPath: "/teams",
-    targetAPIParams: {
+    targetAPIFilters: {
       limit: 500,
     },
   });
 };
 
 export const fetchTeam = (id: number) => {
-  return ProxyAPI.post<ITeamResponse>("/", {
+  return ProxyAPI.post<ITeamResponse>(`/proxy/team/${id}`, {
     targetAPIPath: `/teams/${id}`,
   });
 };
 
 export const fetchPLStandings = () => {
-  return ProxyAPI.post<ICompetitionStandingsResponse>("/", {
+  return ProxyAPI.post<ICompetitionStandingsResponse>("/proxy/standings", {
     targetAPIPath: "/competitions/PL/standings",
-    targetAPIParams: {
+    targetAPIFilters: {
       season: 2020,
     },
   });
